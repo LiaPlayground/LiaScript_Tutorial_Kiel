@@ -25,9 +25,11 @@ translation: Deutsch  translations/German.md
 
 # LiaScript Tutorial an der CAU zu Kiel
 
-![LiaScriptLogo](images/logo.png)
+![LiaScriptLogo](images/logo.png)<!-- style="width: 55%; max-width: 1000px" -->
 
 Kiel, 5. Mai 2022
+
+----------------------------------
 
 Sebastian Zug, André Dietrich (TU Bergakademie Freiberg)
 
