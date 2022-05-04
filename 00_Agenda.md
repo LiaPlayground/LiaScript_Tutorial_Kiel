@@ -16,8 +16,6 @@ comment:  Dieser Kurs für in das Projekt LiaScript ein und diskutiert die
 
 logo:     ./images/logo.png
 
-import: https://raw.githubusercontent.com/LiaTemplates/Rextester/master/README.md
-        https://raw.githubusercontent.com/liaTemplates/processingjs/master/README.md
 
 translation: Deutsch  translations/German.md
 
@@ -54,6 +52,28 @@ Britta Petersen (Christian-Albrechts-Universität zu Kiel)
 > Die Vorstellung der Teilnehmer erfolgt im Rahmen einer Übung im Laufe der Veranstaltung.
 
 
+## Was sind Ihre Erwartungen?
+
+[https://yopad.eu/p/LiaScriptTutorial_Kiel](https://yopad.eu/p/LiaScriptTutorial_Kiel)
+
+![alt-text](images/Etherpad.png)
+
+
+1. Was ist Ihr Hintergrund?
+2. Welche Erwartungen haben Sie an den Workshop?
+3. Wo würden Sie Ihren Kenntnistand in Bezug auf
+     + Git/Github
+     + markdown
+     + Webentwicklungen (html, javascript)
+  mit einer Note von 1 (Novize) - 5 (Experte) einordnen
+
+{{1-3}}
+> **Reflexion - Inhalt:** Ein breitgefächertes heterogenes Publikum :-)
+
+
+{{2-3}}
+> **Reflexion - Aggregation:** Kollaboratives Bearbeiten eines Dokumentes, so dass jeweils der letzte Stand sichtbar bleibt.
+
 
 ## Was haben wir heute vor?
 
@@ -87,4 +107,5 @@ Die Veranstaltung teilt sich in einen Motivationsblock (A-B) und einen Tutorial,
                          v
 ```
 
-## Was sind Ihre Erwartungen
+{{2-3}}
+> **Los geht's**
