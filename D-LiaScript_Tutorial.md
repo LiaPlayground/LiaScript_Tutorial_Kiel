@@ -14,6 +14,8 @@ comment:  Try to write a short comment about
 
 -->
 
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://LiaScript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Kiel/main/D-LiaScript_Tutorial.md)
+
 # Entwicklung von OER mit LiaScript und GitHub
 
 

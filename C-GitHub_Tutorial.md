@@ -15,7 +15,7 @@ import: https://github.com/liascript/CodeRunner
 icon: https://upload.wikimedia.org/wikipedia/commons/d/de/Logo_TU_Bergakademie_Freiberg.svg
 -->
 
-[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/blob/master/11_VersionsverwaltungI.md)
+[![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://LiaScript.github.io/course/?https://raw.githubusercontent.com/LiaPlayground/LiaScript_Tutorial_Kiel/main/C-GitHub_Tutorial.md)
 
 # Github-Tutorial
 
@@ -287,23 +287,23 @@ Aus dem Zustandmodell einer Datei ergeben sich drei Ebenen auf der wir eine Date
   ---------------------------------------------  --------------
   Arbeitskopie     "Staging"        Lokales          Remote
                                    Repository      Repository
-                       |               |                          
-                       |               |                       
-                       |               |                      
-       +-+- - - - - - -|- - - - - - - -|                          
-       | | Änderungen  |               |                          
-       | |             |               |                          
-       +-+             |               |                          
-        |   git add    |               |                          
-        |------------->|  git commit   |                          
-        |              |-------------->|                          
-       +-+             |               |                          
-       | | weitere     |               |                          
-       | | Änderungen  |               |                          
-       +-+             |               |                          
-        |   git add    |               |                          
-        +------------->|  git commit   |                          
-                       |-------------->|                          
+                       |               |
+                       |               |
+                       |               |
+       +-+- - - - - - -|- - - - - - - -|
+       | | Änderungen  |               |
+       | |             |               |
+       +-+             |               |
+        |   git add    |               |
+        |------------->|  git commit   |
+        |              |-------------->|
+       +-+             |               |
+       | | weitere     |               |
+       | | Änderungen  |               |
+       +-+             |               |
+        |   git add    |               |
+        +------------->|  git commit   |
+                       |-------------->|
                        |               |                                                 |               |                                       .
 ```
 
