@@ -57,15 +57,15 @@ __Dr. André Dietrich__
   - Remote Labore
 
 
-> Die Vorstellung der Teilnehmer erfolgt im Rahmen einer Übung im Laufe der Veranstaltung.
+> Die Vorstellung der Teilnehmer erfolgt gleich im Rahmen einer Übung.
 
 
 ## Projekt Motivation
 
-    {{1}}
+    {{0}}
 !?[RemoteLab-Video](https://www.youtube.com/watch?v=bICfKRyKTwE "Industrial eLab Demonstration aus Magdeburg")
 
-    {{2}}
+    {{1}}
 ![Noka vs Destop](images/nokia.jpeg "LiaScript Klassenraum auf dem Desktop und Feature-Phone.")
 
 
