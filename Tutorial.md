@@ -1,7 +1,7 @@
 <!--
 author:   Sebastian Zug & André Dietrich
 
-email:    @mail.org
+email:    LiaScript@web.de
 
 version:  0.0.1
 
