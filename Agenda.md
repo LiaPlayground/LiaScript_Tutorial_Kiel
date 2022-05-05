@@ -16,9 +16,6 @@ comment:  Dieser Kurs für in das Projekt LiaScript ein und diskutiert die
 
 logo:     ./images/logo.png
 
-
-translation: Deutsch  translations/German.md
-
 -->
 
 [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/WillkommenAufLiaScript/master/eTeach_Talk.md#1)
@@ -37,21 +34,39 @@ Britta Petersen (Christian-Albrechts-Universität zu Kiel)
 
 ## Wer sind wir?
 
-| Name                    | Forschungsschwerpunkte                                                     |
-| ----------------------- | -------------------------------------------------------------------------- |
-| Prof. Dr. Sebastian Zug | Leiter des Lehrstuhls für Softwareentwicklung und Robotik                  |
-|                         | - Robotik                                                                  |
-|                         | + Kartensysteme für Outdoorroboter                                         |
-|                         | + Aquatische Robotiksysteme                                                |
-|                         | - eLearning                                                                |
-|                         | + Remote Labore                                                            |
-|                         | + Metriken für erfolgreiche Studentische Teamarbeit in der Informatiklehre |
-|                         | + _LiaScript_                                                              |
-| Dr. André Dietrich      |                                                                            |
-|                         |                                                                            |
+__Prof. Dr. Sebastian Zug__: Leiter des Lehrstuhls für Softwareentwicklung und Robotik
+
+- Robotik
+
+  + Kartensysteme für Outdoorroboter
+  + Aquatische Robotiksysteme
+
+- eLearning
+
+  + Remote Labore
+  + Metriken für erfolgreiche Studentische Teamarbeit in der Informatiklehre
+  + _LiaScript_
+
+__Dr. André Dietrich__
+
+- hat mal Robotik gemacht ...
+- Programmiersprachen und -paradigmen
+- eLearning
+
+  - LiaScript
+  - Remote Labore
 
 
 > Die Vorstellung der Teilnehmer erfolgt im Rahmen einer Übung im Laufe der Veranstaltung.
+
+
+## Projekt Motivation
+
+    {{1}}
+!?[RemoteLab-Video](https://www.youtube.com/watch?v=bICfKRyKTwE "Industrial eLab Demonstration aus Magdeburg")
+
+    {{2}}
+![Noka vs Destop](images/nokia.jpeg "LiaScript Klassenraum auf dem Desktop und Feature-Phone.")
 
 
 ## Was sind Ihre Erwartungen?
@@ -92,13 +107,13 @@ Die Veranstaltung teilt sich in einen Motivationsblock (A-B) und einen Tutorial,
                                    v
                                   .-.
                                  ( B ) Visionen und Herausforderungen von Open
-                                  '-'     Educational Ressoures (OER)                   
+                                  '-'     Educational Ressoures (OER)
                                 /     \
                                /       \
  Lösungsschine Multi-Autoren  v         v   Lösungsschiene Inhalt
                              .-.       .-.
            Einfühung in Git ( 1 )     ( 2 ) Einführung in LiaScript
-           Github            '-'       '-'  
+           Github            '-'       '-'
                                \       /
                                 \     /
                                  v   v
