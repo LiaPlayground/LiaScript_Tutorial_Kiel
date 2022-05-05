@@ -25,7 +25,7 @@ translation: Deutsch  translations/German.md
 
 [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://raw.githubusercontent.com/SebastianZug/WillkommenAufLiaScript/master/eTeach_Talk.md#1)
 
-# A) Open Educational Ressources (OER) - Vision und Herausforderungen
+# A) Visionen und Herausforderungen von Open Educational Ressources (OER)
 
 ![OER logo](images/Global_Open_Educational_Resources_Logo.png "OER-Logo - Quelle: Jonathasmello - Eigenes Werk, CC BY 3.0, [https://commons.wikimedia.org/w/index.php?curid=18460156](https://commons.wikimedia.org/w/index.php?curid=18460156)")
 
@@ -45,22 +45,16 @@ TU Bergakademie Freiberg
 
 ------------------------------------------------------
 
-## OER Vision
+## Ausgangspunkt
 
-> {0-1}{Lehrende möchten motivierende, interaktive Lehrmaterialien realisieren.}
-> {1-2}{Lehrende möchten motivierende, interaktive Lehrmaterialien mit einem überschaubaren Aufwand realisieren.}
-> {2-3}{Lehrende möchten maximal motivierende, interaktive Lehrmaterialien mit einem überschaubaren Aufwand realisieren, die optimal auf die eigenen didaktischen Ziele abgestimmt sind.}
+> {0-5}{Lehrende möchten motivierende, interaktive Lehrmaterialien realisieren.}
 
-{{3}}
+             {{1-2}}
 ********************************************************************************
-
-> Das kann er/sie natürlich alleine realisieren, aber ...
 
 ---------------------
 
-**1. Muss er/sie sich über alle Inhalte selbst Gedanken machen**
-
-Beispiel:
+Beispiele:
 
 
 - [[male (der)] (female [die]) [neuter (das)]]
@@ -69,17 +63,40 @@ Beispiel:
 
 ---------------------
 
-**2. Muss er/sie sich erheblichen technischen Herausforderungen stellen**
-
-Beispiel:
-
 ??[ear model](https://sketchfab.com/3d-models/ear-anatomy-468e2039bde34a3fabb9e90bff9cd56b)
-
----------------------
 
 ********************************************************************************
 
-### Ausgangspunkt
+
+            {{2-5}}
+********************************************************************************
+- __Lösungsansatz 1__: Ich mache alles selbst
+
+  + Der Lehrende muss sie sich über alle Inhalte selbst Gedanken machen
+  + Der Lehrende muss sich erheblichen technischen Herausforderungen stellen
+
+
+********************************************************************************
+
+
+{{3-5}}
+********************************************************************************
+
+- __Lösungsansatz 2__: Ich nutze Materialien anderer Lehrender
+
+    + Die optimale Abstimmung auf meine eigenen didaktischen Ziele fehlt.
+
+********************************************************************************
+
+{{4-5}}
+********************************************************************************
+
+> Offenbar sind hybride Ansätze - Nutzung und Adaption - erforderlich! Kann man diese Anforderungen weiter konkretisieren?
+
+********************************************************************************
+
+## OER als genereller Lösungsansatz?
+
 
 >  **Open Courseware / Open Educational Resources** ... teaching, learning and
 > research materials in any medium, digital or otherwise,that reside in the
@@ -153,7 +170,7 @@ Kurs.txt         Version 1.0          Kurs.txt          Version 1.1
 | Anforderung                  | txt |                                                          |
 | ---------------------------- | --- | -------------------------------------------------------- |
 | `verwahren/vervielfältigen ` | ++  | vorteilhaft wegen geringer Größe                         |
-| `verwenden`                  | +   | analoge / digitale Verteilung an Studieren unkompliziert |
+| `verwenden`                  | ++  | analoge / digitale Verteilung an Studieren unkompliziert |
 | `verarbeiten`                | ++  | verarbeitbar ohne zusätzliche Software                   |
 | `vermischen`                 | ++  | einfache Kombination von Textfragmenten per Copy&Paste   |
 | `verbreiten`                 | ++  | gut exportierbar                                         |
@@ -165,9 +182,13 @@ Kurs.txt         Version 1.0          Kurs.txt          Version 1.1
 {{1-2}}
 ********************************************************************************
 
-> _1. Die 5V Definition fokussiert das Open in OER lässt aber das Education beiseite._
+Die 5V Definition ...
+
+> _1.  ... fokussiert das Open in OER lässt aber das Education beiseite._
 >
-> _2. Die Verwaltung und Auffindbarkeit von OER Inhalten ist dadurch nicht erfasst._
+> _2. ... ignoriert die Notwendigkeit eines Versionsmanagmentsystemes.
+>
+> _3. ... berücksichtig die Auffindbarkeit von OER Inhalten nicht._
 
 | Anforderung                                           | txt                           |                                                          |
 | ----------------------------------------------------- | ----------------------------- | -------------------------------------------------------- |
@@ -176,10 +197,68 @@ Kurs.txt         Version 1.0          Kurs.txt          Version 1.1
 | `verarbeiten`                                         | ++                            | verarbeitbar ohne zusätzliche Software                   |
 | `vermischen`                                          | ++                            | einfache Kombination von Textfragmenten per Copy&Paste   |
 | `verbreiten`                                          | ++                            | gut exportierbar                                         |
-| <!-- Style="color:green" --> verwalten / versionieren | ++                            |                                                          |
+| <!-- Style="color:green" --> verwalten / versionieren | <!-- Style="color:red" --> ??                           |                                                          |
 | <!-- Style="color:green" -->   motivieren             | <!-- Style="color:red" --> -- | keine zeitgemäßen Formate und interaktiven Inhalte       |
 
 > __Offensichtlich brauchen wir Formate, die neben den positiven Aspekten von Textdarstellungen auch das erweiterte Set von Anforderungen abdecken.__
+
+********************************************************************************
+
+### Vergleich mit Wikipedia
+
+> Kann Wikipedia für OER Pate stehen?
+
+| Aspekt       | Wikipedia - Lösung                                          | Nachteil                                                     |
+| ------------ | ----------------------------------------------------------- | ------------------------------------------------------------ |
+| Suche        | eine Instanz eines Artikels unmittelbar abrufbar      | keine unterschiedlichen Ausprägungen zu einem Thema möglich. |
+| Tools        | integrierter Editor auf der Basis eines Markdown-Dialekts   | starke Beschränkung der Möglichkeiten auf strukturierte Texte, Formeln, Bilder                                                             |
+| Qualität     | ausgefeilte Reviewsystem mit Experten, Versionsdatenerfassung und -vergleich |                                                              |
+| Sichtbarkeit | Autorenschaft in der Versionshistorie sichtbar              |                                                              |
+
+
+### OER in der Realität ... OER in OPAL
+
+                {{0-1}}
+********************************************************************************
+
+Anderen Kursmaterialien zur Verfügung zu stellen, ist in OPAL im Wesentlichen auf 3 Wegen möglich:
+
++ für ganze Kurse
+
+   - innerhalb der OPAL "Welt" als offene Kurse
+   - über Exportschnittstellen, die die Einbettung in andere LMS ermöglichen
+   - manuelle Übertragung
+
++ für einzelne Dateien
+
+   - Dateien mit Meta-Informationen und expliziter Angabe
+
+![alt-text](images/OER_in_OPAL.png "Screenshot eines OER Materials im OPAL LMS, 22. März 2022")
+
+********************************************************************************
+
+                    {{1-2}}
+********************************************************************************
+
+<!-- data-type="BarChart"
+data-title="Anteil der Datenformate im Kontext der OPAL OER Materialien"
+data-xlabel="Datentyp"
+data-ylabel="% of Anzahl" -->
+| Dateityp | Anzahl | ratio    |
+| -------- | ------ | -------- |
+| `pdf`    | 5242   | 0.494995 |
+| `jpg`    | 1040   | 0.098206 |
+| `mkv`    | 873    | 0.082436 |
+| `mp4`    | 586    | 0.055335 |
+| `png`    | 494    | 0.046648 |
+| `zip`    | 443    | 0.041832 |
+| `html`   | 387    | 0.036544 |
+| `docx`   | 376    | 0.035505 |
+| `pptx`   | 245    | 0.023135 |
+| `xlsx`   | 191    | 0.018036 |
+
+
+Die Materialien im OPAL kommen überwiegend ohne Lizenzen und als geschlossenes Dateiformat daher. Eine Wiederverwendung ist entsprechend nur schwer möglich.
 
 ********************************************************************************
 
@@ -194,21 +273,9 @@ Kurs.txt         Version 1.0          Kurs.txt          Version 1.1
 | <!-- Style="color:red" --> Aufwand  | <!-- Style="color:red" --> "_Da muss man ja Informatik studiert haben!_"                |
 | <!-- Style="color:red" -->Abdeckung | <!-- Style="color:red" -->"_Da fehlen mir aber die Schnittstellen für meine Tools XY!_" |
 
-<!--
-style="width: 100%; max-width: 860px; display: block; margin-left: auto; margin-right: auto;"
--->
-```ascii
 
-      Wunsch nach                                             Wunsch nach
-  einfacher Umsetzung  -----------> Konflikt <----------- spezifischen Elementen
-                                       |                       im Material
-                                       |
-                                       v
-                              OER als Lösungsansatz
 
-```
-
-## OER Praxis
+## Die LiaScript Vision von OER
 
 > 1. Materialien müssen transformierbar sein, um eine Wiederverwendung zu ermöglichen. (_Verarbeiten/Verwenden/Verbreiten_)
 > 2. Materialien brauchen Metadaten, um auffindbar zu sein. (_Verbreiten_)
@@ -218,7 +285,11 @@ style="width: 100%; max-width: 860px; display: block; margin-left: auto; margin-
 style="width: 100%; max-width: 860px; display: block; margin-left: auto; margin-right: auto;"
 -->
 ```ascii
-+------------------+
+   +---------------------+
+   | # Digital Systeme V1|\
+ +--------------------+  +-+
+ | # Digital Systeme  |\
++------------------+  +-+
 | # Digital Systems|\                                      .-----------.
 | (SoSe 2021)      +-+                              ╔══════|   LMS  X  |══════╗
 |                    |  --------------------------> ║      '-----------'      ║
@@ -243,168 +314,6 @@ Versionshistorie: ...           '-.(   ).-'     |   ║                         
 ```
 *Transformation von OER Materialien für die Verwendung in verschiedenen LMS*
 
-### OER in OPAL ...
-
-                {{0-1}}
-********************************************************************************
-
-Anderen Kursmaterialien zur Verfügung zu stellen, ist in OPAL im Wesentlichen auf 3 Wegen möglich:
-
-+ für ganze Kurse
-
-   - innerhalb der OPAL "Welt" als offene Kurse
-   - über Exportschnittstellen, die die Einbettung in andere LMS ermöglichen
-   - manuelle Übertragung
-
-+ für einzelne Dateien
-
-   - Dateien mit Meta-Informationen und expliziter Angabe
-
-![alt-text](images/OER_in_OPAL.png "Screenshot eines OER Materials im OPAL LMS, 22. März 2022")
-
-********************************************************************************
-
-                    {{1-2}}
-********************************************************************************
-
-Welche Muster lassen sich mit Blick auf die verfügbaren Kurse erkennen?
-
-| Lizenz               | Anzahl |
-| -------------------- | ------ |
-| keine                | 3764   |
-| CC BY 4.0 Int.       | 1499   |
-| CC BY-NC 4.0 Int.    | 1675   |
-| CC BY-NC-ND 4.0 Int. | 3950   |
-| CC BY-NC-SA 4.0 Int. | 977    |
-| CC BY-ND 4.0 Int.    | 143    |
-| CC BY-SA 4.0 Int.    | 2308   |
-| CC0 1.0 Universell   | 834    |
-
-
-<!-- data-type="BarChart"
-data-title="Anteil der Datenformate im Kontext der OPAL OER Materialien"
-data-xlabel="Datentyp"
-data-ylabel="% of Anzahl" -->
-| Dateityp | Anzahl | ratio    |
-| -------- | ------ | -------- |
-| `pdf`    | 5242   | 0.494995 |
-| `jpg`    | 1040   | 0.098206 |
-| `mkv`    | 873    | 0.082436 |
-| `mp4`    | 586    | 0.055335 |
-| `png`    | 494    | 0.046648 |
-| `zip`    | 443    | 0.041832 |
-| `html`   | 387    | 0.036544 |
-| `docx`   | 376    | 0.035505 |
-| `pptx`   | 245    | 0.023135 |
-| `xlsx`   | 191    | 0.018036 |
-
-
-Die Materialien im OPAL kommen überwiegend ohne Lizenzen und als geschlossenes Dateiformat daher. Eine Wiederverwendung ist entsprechend nur schwer möglich.
-
-********************************************************************************
-
-### OER in LiaScript ...
-
-*LiaScript* löst den Inhalt vom LMS und erlaubt die Anwendung von Methoden der verteilten Softwareentwicklung.
-
-- Beschreibungssprache
-- Verteilte Entwicklung
-- Serverlose Infrastruktur
-- Dynamische Inhalte
-
-Weitere Informationen finden Sie unter der Projektwebseite [https://liascript.github.io/](https://liascript.github.io/) in der [Dokumentation](https://liascript.github.io/course/?https://raw.githubusercontent.com/liaScript/docs/master/README.md#1) oder dem [Youtube-Channel](https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg)
-
-       {{1}}
-********************************************************************************
-
-**Tabellen**
-
-```markdown
-<!-- data-type="BarChart"
-data-title="Anteil der Datenformate im Kontext der OPAL OER Materialien"
--->
-| Dateityp | Anzahl | ratio    |
-| -------- | ------ | -------- |
-| `pdf`    | 5242   | 0.494995 |
-| `jpg`    | 1040   | 0.098206 |
-| `mkv`    | 873    | 0.082436 |
-| `mp4`    | 586    | 0.055335 |
-| `png`    | 494    | 0.046648 |
-| `zip`    | 443    | 0.041832 |
-| `html`   | 387    | 0.036544 |
-| `docx`   | 376    | 0.035505 |
-| `pptx`   | 245    | 0.023135 |
-| `xlsx`   | 191    | 0.018036 |
-```
-
-********************************************************************************
-
-      {{2}}
-********************************************************************************
-
-**Ausführbarer Code**
-
-```
-void setup() {
-  size(480, 220);
-}
-
-void draw() {
-  if (mousePressed) {
-    fill(0);
-  } else {
-    fill(255);
-  }
-  ellipse(mouseX, mouseY, 80, 80);
-}
-```
-
-
-
-```cpp                         Processing.js
-void setup() {
-  size(480, 220);
-}
-
-void draw() {
-  if (mousePressed) {
-    fill(0);
-  } else {
-    fill(255);
-  }
-  ellipse(mouseX, mouseY, 80, 80);
-}
-```
-@Processing.eval
-
-********************************************************************************
-
-      {{3}}
-********************************************************************************
-
-**Quizze**
-
-```markdown
-Markieren Sie die ungeraden Zahlen!
-
-    [[X]] 1
-    [[ ]] 2
-    [[X]] 3
-    [[?]] Nur zur Erinnerung, wie definiert sich eine ungerade Zahl?
-```
-
-Markieren Sie die ungeraden Zahlen!
-
-    [[X]] 1
-    [[ ]] 2
-    [[X]] 3
-    [[?]] Nur zur Erinnerung, wie definiert sich eine ungerade Zahl?
-
-********************************************************************************
-
-### ... und jetzt alles zusammen
-
-In der folgenden Demo wird die Integration von LiaScript auf Basis des Exporters dargestellt. Grundlage ist der OPAL Kurs [Link](https://bildungsportal.sachsen.de/opal/auth/RepositoryEntry/28960423936/CourseNode/103166567950189)
 
 ### Erfahrungen bei Einsatz von OER
 
@@ -417,7 +326,7 @@ Ergebnisse:
 3. Die Interaktion zwischen Lehrenden und Studierenden steigert sich - *"Sollte man das nicht besser so erklären ..."*
 4. Das Verständnis über verteilte Entwicklung von Inhalten entwickelt sich sehr positiv, selbst die Nicht-Informatiker beschäftigen sich mit den Methoden.
 
-## OER Forschung
+### OER Forschung
 
                 {{0-1}}
 ********************************************************************************
@@ -451,11 +360,3 @@ Ergebnisse:
 > Lösungsansatz: Plugin-Konzept in LiaScript
 
 ********************************************************************************
-
-## Kontakt
-
-Neugierig geworden auf OER? Sprechen Sie uns an!
-
-| | |
-| Prof. Dr. Sebastian Zug | [sebastian.zug@informatik.tu-freiberg.de](mailto:sebastian.zug@informatik.tu-freiberg.de)   |
-| Dr. André Dietrich      | [andre.dietrich@informatik.tu-freiberg.de](mailto:andre.dietrich@informatik.tu-freiberg.de) |

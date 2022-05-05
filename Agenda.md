@@ -84,29 +84,40 @@ Die Veranstaltung teilt sich in einen Motivationsblock (A-B) und einen Tutorial,
 <!-- style="display: block; margin-left: auto; margin-right: auto; max-width: 815px;" -->
 ```ascii
 
-                        .-.
-                       ( A ) Beschränkungen existierender Tools
-                        '-'  zum kollaborativen Schreiben
-                         |
-                         |
-                         v
-                        .-.
-                       ( B ) Visionen und Herausforderungen von OER
-                        '-'                        
-                      /     \
-                     /       \
-                    v         v
-                   .-.       .-.
- Einfühung in Git ( 1 )     ( 2 ) Einführung in LiaScript
- Github            '-'       '-'  
-                     \       /
-                      \     /
-                       v   v
-                        .-.
-                       ( 3 )  Kooperative Erzeugung von OER
-                        '-'   auf der Basis von LiaScript
-                         |
-                         v
+                                  .-.
+                                 ( A ) Beschränkungen existierender Tools
+                                  '-'  zum kollaborativen Schreiben
+                                   |
+                                   |
+                                   v
+                                  .-.
+                                 ( B ) Visionen und Herausforderungen von Open
+                                  '-'     Educational Ressoures (OER)                   
+                                /     \
+                               /       \
+ Lösungsschine Multi-Autoren  v         v   Lösungsschiene Inhalt
+                             .-.       .-.
+           Einfühung in Git ( 1 )     ( 2 ) Einführung in LiaScript
+           Github            '-'       '-'  
+                               \       /
+                                \     /
+                                 v   v
+                                  .-.
+                                 ( 3 )  Kooperative Erzeugung von OER
+                                  '-'   auf der Basis von LiaScript
+                                   |
+                                   v
+                                  .-.
+                                 ( 4 )  Export und Integration
+                                  '-'   von LiaScript Inhalten
+                                   |
+                                   v
+
+
+
+
+
+
 ```
 
 {{2-3}}

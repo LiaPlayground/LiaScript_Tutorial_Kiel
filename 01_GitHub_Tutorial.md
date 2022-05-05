@@ -17,27 +17,14 @@ icon: https://upload.wikimedia.org/wikipedia/commons/d/de/Logo_TU_Bergakademie_F
 
 [![LiaScript](https://raw.githubusercontent.com/LiaScript/LiaScript/master/badges/course.svg)](https://liascript.github.io/course/?https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/blob/master/11_VersionsverwaltungI.md)
 
-# Versionsverwaltung I
-
-| Parameter                | Kursinformationen                                                                                                                                                                          |
-| ------------------------ | ------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ |
-| **Veranstaltung:**       | `Vorlesung Softwareentwicklung`                                                                                                                                                            |
-| **Semester**             | `Sommersemester 2021`                                                                                                                                                                      |
-| **Hochschule:**          | `Technische Universität Freiberg`                                                                                                                                                          |
-| **Inhalte:**             | `Motivation der Versionsverwaltung in der Softwareentwicklung`                                                                                                                                |
-| **Link auf den GitHub:** | [https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/blob/master/11_VersionsverwaltungI.md](https://github.com/TUBAF-IfI-LiaScript/VL_Softwareentwicklung/blob/master/11_VersionsverwaltungI.md) |
-| **Autoren**              | @author                                                                                                                                                                                    |
-
-![](https://media.giphy.com/media/26tn33aiTi1jkl6H6/source.gif)
-
----------------------------------------------------------------------
+# Github-Tutorial
 
 ## Motivation
 
                                    {{0-2}}
 ******************************************************************************
 
-Was war das umfangreicheste Dokument, an dem Sie bisher gearbeitet haben? Bei vielen sicher eine Hausarbeit am Gymnasium. Wie haben Sie Ihren Fortschritt organisiert?
+Was war das umfangreicheste Dokument, an dem Sie bisher gearbeitet haben? Wie haben Sie Ihren Fortschritt organisiert?
 
 1. Im schlimmsten Fall haben Sie sich gar keine Gedanken gemacht und immer wieder ins gleiche Dokument geschrieben, das in einem Ordner liegt, der alle zugehörigen Dateien umfasst.
 2. Eine Spur besser ist die Idee wöchentlich neue Kopien des Ordners anzulegen und diese in etwa so zu benennen:
@@ -98,11 +85,11 @@ Und nun übertragen wir den Ansatz auf eine Softwareentwicklungsprojekt mit viel
 
 ### Lösungsansatz
 
-Eine Versionsverwaltung ist ein System, das zur Erfassung von Änderungen an Dokumenten oder Dateien verwendet wird. Alle Versionen werden in einem Archiv mit Zeitstempel und Benutzerkennung gesichert und können später wiederhergestellt werden. Versionsverwaltungssysteme werden typischerweise in der Softwareentwicklung eingesetzt, um Quelltexte zu verwalten.
+> Definition: Eine Versionsverwaltung ist ein System, das zur Erfassung von Änderungen an Dokumenten oder Dateien verwendet wird. Alle Versionen werden in einem Archiv mit Zeitstempel und Benutzerkennung gesichert und können später wiederhergestellt werden. Versionsverwaltungssysteme werden typischerweise in der Softwareentwicklung eingesetzt, um Quelltexte zu verwalten.
 
-Ein Beispiel, wie ein Versionsmanagementsystem die Arbeit von verteilten Autoren unterstützt ist die Implementierung von Wikipedia. Jede Änderung eines Artikels wird dokumentiert. Alle Versionen bilden eine Kette, in der die letzte Version als gültige angezeigt wird. Entsprechend der Angaben kann nachvollzogen werden: wer wann was geändert hat. Damit ist bei Bedarf eine Rückkehr zu früheren Version möglich.
+Beispiel - Versionsmanagementsystem von Wikipedia
 
-![VersionsmanagementWikipedia](./img/11_VersionsverwaltungI/VersionenVonVersionsverwaltung.png "Versionen des Artikels Versionsverwaltung auf der Webseite Wikipedia")
+![Wikipedia Historie](images/VersionenVonVersionsverwaltung.png "Versionen des Artikels Versionsverwaltung auf der Webseite Wikipedia")
 
                                 {{1-2}}
 ******************************************************************************
@@ -117,109 +104,57 @@ Hauptaufgaben:
 
 ******************************************************************************
 
+### Mischen von Versionen
 
-### Strategien zur Konfliktvermeidung
+**Schritt 1: Identifikation von Unterschieden**
 
-**Herausforderung**
+Zunächst einmal müssen wir feststellen an welchen Stellen es überhaupt Unterschiede
+gibt. Welche Differenzen sehen Sie zwischen den beiden Dokumenten:
 
-Das Beispiel entstammt dem Buch _Version Control with Subversion_ [^Subversion]
-
-Zwei Nutzer (Harry und Sally) arbeiten am gleichen Dokument (A), das auf einem
-zentralen Server liegt:
-
-+ Beide führen verschiedene Änderungen an ihren lokalen Versionendes Dokuments durch.
-+ Die lokalen Versionen werden nacheinander in das Repository geschrieben.
-+ Sally überschreibt dadurch eventuell Änderungenvon Harry.
-
-Die zeitliche Abfolge der Schreibzugriffe bestimmt welche Variante des Dokuments A überlebt.
-
-<!--
-style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-right: auto;"
--->
-```ascii
-+----------------------------+---------------------------+
-|        Repository          |       Repository          |
-|        +-------+           |       +-------+           |
-|        |   A   |           |       |   A   |           |
-|        +-------+           |       +-------+           |
-|         /     \            |                           |
-|    read/       \read       |                           |
-|       /         \          |                           |
-|      v           v         |                           |
-| +-------+    +-------+     | +-------+   +-------+     |
-| |   A   |    |   A   |     | |   A'  |   |  A''  |     |
-| +-------+    +-------+     | +-------+   +-------+     |
-|   Harry        Sally       |   Harry       Sally       |
-|                            |                           |
-| Erzeugen der lokalen Kopie | Barbeitung                |
-+----------------------------+---------------------------+
-|        Repository          |       Repository          |
-|        +-------+           |       +-------+           |
-|        |   A'  |           |       |  A''  |           |
-|        +-------+           |       +-------+           |
-|         ^                  |              ^            |
-|   write/                   |               \write      |
-|       /                    |                \          |
-|      /                     |                 \         |
-| +-------+    +-------+     | +-------+   +-------+     |
-| |   A'  |    |  A''  |     | |   A'  |   |  A''  |     |
-| +-------+    +-------+     | +-------+   +-------+     |
-|   Harry        Sally       |   Harry       Sally       |
-|                            |                           |
-|Harry schreibt seine Version|Sally übermittelt A''      |
-+----------------------------+---------------------------+                     .
+```markdown                      DokumentV1.md
+TU
+Bergakademie
+Freiberg
+Softwareentwicklung
+Online Course
+Sommersemester 2020
+Lorem ipsum dolor sit amet, CONSETETUR sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 ```
 
-**Lösung I - Exklusives Bearbeiten (Sequenzialisierung)**
+```markdown                      DokumentV2.md
 
-Bei der pessimistische Versionsverwaltung (*Lock Modify Unlock*) werden einzelne Dateien vor einer Änderung durch den Benutzer gesperrt und nach Abschluss der Änderung wieder freigegeben werden. Während sie gesperrt sind, verhindert das System Änderungen durch andere Benutzer. Der Vorteil dieses Konzeptes ist, dass kein Zusammenführen von Versionen erforderlich ist, da nur immer ein Entwickler eine Datei ändern kann.
 
-<!--
-style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-right: auto;"
--->
-```ascii
-+----------------------------+---------------------------+
-|        Repository          |       Repository          |
-|        ╔═══════╗           |       ╔═══════╗           |
-|        ║   A   ║  locked   |       ║   A   ║  locked   |
-|        ╚═══════╝           |       ╚═══════╝           |
-|         ^/                 |             X             |
-|    lock//read              |              \lock        |
-|       //                   |               \           |
-|      /v                    |                \          |
-| +-------+    +-------+     | +-------+   +-------+     |
-| |   A   |    |       |     | |   A'  |   |  A''  |     |
-| +-------+    +-------+     | +-------+   +-------+     |
-|   Harry        Sally       |   Harry       Sally       |
-|                            |                           |
-| Harry "locks", kopiert und | Sallys lock request wird  |
-| beginnt die Bearbeitung    | blockiert                 |
-+----------------------------+---------------------------+
-|        Repository          |       Repository          |
-|        +-------+           |       +-------+           |
-|        |   A'  |           |       |  A''  |           |
-|        +-------+           |       +-------+           |
-|         ^^                 |             ^\            |
-|   write//unlock            |         lock \\read       |
-|       //                   |               \\          |
-|      //                    |                \v         |
-| +-------+    +-------+     | +-------+   +-------+     |
-| |   A'  |    |  A''  |     | |   A'  |   |   A'  |     |
-| +-------+    +-------+     | +-------+   +-------+     |
-|   Harry        Sally       |   Harry       Sally       |
-|                            |                           |
-| Harry übermittelt seine    | Sally blockiert und liest |
-| Version und löst den Lock  | die neue Version          |
-+----------------------------+---------------------------+                     .
+
+TU
+Bergakademie
+Freiberg
+Softwareentwicklung
+Sommersemester 2019
+Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
 ```
 
-Welche Aspekte sehen Sie an dieser Lösung kritisch?
+Offenbar wurden sowohl Lehrzeichen, als auch neue Zeilen eingeführt. In anderen Zeilen wurden Inhalte angepasst.
 
-1. Administrative Probleme ... Gesperrte Dokumente werden vergessen zu entsperren.
-2. Unnötige Sequentialisierung der Arbeit ... Wenn zwei Nutzer ein Dokument an verschiedenen Stellen ändern möchten, könnten sie dies auch gleichzeitig tun.
-3. Keine Abbildung von übergreifenden Abhängigkeiten ... Zwei Nutzer arbeiten getrennt auf den Dokumenten A und B. Was passiert, wenn A von B abhängig ist? A und B passen nicht mehr zusammen. Die Nutzer müssen dieses Problem diskutieren.
+Nutzen wir das Tool `diff` um diese Änderungen automatisiert festzustellen. Die Zeilen, die mit `>` beginnen, sind nur in der ersten Datei vorhanden, diejenigen, die mit `<`, markieren das Vorkomen in der zweiten Datei. Die einzelnen Blöcke werden durch sogenannte change commands („Änderungsbefehle“) getrennt, die angeben, welche Aktion (Zeilen hinzufügen – a, ändern – c oder entfernen – d) in welchen Zeilen ausgeführt wurde.
 
-**Lösung II - Kollaboratives Arbeiten mit Mischen (Mergen)**
+```console
+▶diff DokumentV1.md DokumentV2.md
+0a1,3
+>
+>
+>
+5,7c8,9
+< Online Course
+< Sommersemester 2020
+< Lorem ipsum dolor sit amet, CONSETETUR sadipscing elitr, ...
+---
+> Sommersemester 2019
+> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, ...
+```
+
+> **Merke**: Sehr lange Zeilen erschweren die Suche nach wirklichen Änderungen!
+
+**Schritt 2: Merge von Versionen**
 
 Optimistische Versionsverwaltungen (*Copy Modify Merge*) versuchen die die Schwächen der pessimistischen Versionsverwaltung zu beheben, in dem sie gleichzeitige Änderungen durch mehrere Benutzer an einer Datei zu lassen und anschließend diese Änderungen automatisch oder manuell zusammen führen (Merge).
 
@@ -291,246 +226,15 @@ style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-
 +----------------------------+---------------------------+                     .
 ```
 
-Ablauf:
-
-+ Harry und Sally kopierendas das Dokument A in ihre lokalen Ordner.
-+ Beide arbeiten unabhängig daran und erzeugen die Versionen A' und A''
-+ Sally schreibt als Erste das Dokument in das Repository zurück.
-+ Harry kann das Dokument nun nicht mehr zurückschreiben, seine Version ist veraltet
-+ Harry vergleicht seine lokale Version mit der aktuellen Version im Repository und mischt die Änderungen von Sally mit seinen Anpassungen
-+ Die neue (gemischte) Version A\* wird zurückgeschrieben.
-+ Sally muss eine neue Leseoperation realisieren, da Ihre lokale Version veraltet ist.
-
 Welche Konsequenzen ergeben sich daraus?
 
 + Unser Dokument muss überhaupt kombinierbar sein! Auf ein binäres Format ließe sich das Konzept nicht anwenden!
 + Das Dokument liegt in zeitgleich in n-Versionen vor, die ggf. überlappende Änderungen umfassen.
 + Das zentrale Repository kennt die Version von Harry nur indirekt. Man kann zwar indirekt aus A'' und A* auf A' schließen, man verliert aber zum Beispiel die Information wann Harry seine Änderungen eingebaut hat.
 
-Die Herausforderung liegt somit im Mischen von Dokumenten!
+> Die Herausforderung liegt somit im Mischen von Dokumenten!
 
 [^Subversion]: Brian W. Fitzpatrick, Ben Collins-Sussman, C. Michael Pilato, Version Control with Subversion, 2nd Edition, O'Reilly Media
-
-### Mischen von Dokumenten
-
-**Schritt 1: Identifikation von Unterschieden**
-
-Zunächst einmal müssen wir feststellen an welchen Stellen es überhaupt Unterschiede
-gibt. Welche Differenzen sehen Sie zwischen den beiden Dokumenten:
-
-```markdown                      DokumentV1.md
-TU
-Bergakademie
-Freiberg
-Softwareentwicklung
-Online Course
-Sommersemester 2020
-Lorem ipsum dolor sit amet, CONSETETUR sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-```
-
-```markdown                      DokumentV2.md
-
-
-
-TU
-Bergakademie
-Freiberg
-Softwareentwicklung
-Sommersemester 2019
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
-```
-
-Offenbar wurden sowohl Lehrzeichen, als auch neue Zeilen eingeführt. In anderen Zeilen wurden Inhalte angepasst.
-
-Nutzen wir das Tool `diff` um diese Änderungen automatisiert festzustellen. Die Zeilen, die mit `>` beginnen, sind nur in der ersten Datei vorhanden, diejenigen, die mit `<`, markieren das Vorkomen in der zweiten Datei. Die einzelnen Blöcke werden durch sogenannte change commands („Änderungsbefehle“) getrennt, die angeben, welche Aktion (Zeilen hinzufügen – a, ändern – c oder entfernen – d) in welchen Zeilen ausgeführt wurde.
-
-```console
-▶diff DokumentV1.md DokumentV2.md
-0a1,3
->
->
->
-5,7c8,9
-< Online Course
-< Sommersemester 2020
-< Lorem ipsum dolor sit amet, CONSETETUR sadipscing elitr, ...
----
-> Sommersemester 2019
-> Lorem ipsum dolor sit amet, consetetur sadipscing elitr, ...
-```
-
-> **Merke**: Sehr lange Zeilen erschweren die Suche nach wirklichen Änderungen!
-
-Dahinter steht das _Longest Common Subsequence_ Problem, dessen Umsetzung kurz dargestellt werden soll.
-
-```python   lcs_example.py
-def lcs_algo(S1, S2, m, n):
-    L = [[0 for x in range(n+1)] for x in range(m+1)]
-
-    # Building the mtrix in bottom-up way
-    for i in range(m+1):
-        for j in range(n+1):
-            if i == 0 or j == 0:
-                L[i][j] = 0
-            elif S1[i-1] == S2[j-1]:
-                L[i][j] = L[i-1][j-1] + 1
-            else:
-                L[i][j] = max(L[i-1][j], L[i][j-1])
-
-    index = L[m][n]
-
-    lcs_algo = [""] * (index+1)
-    lcs_algo[index] = ""
-
-    i = m
-    j = n
-    while i > 0 and j > 0:
-
-        if S1[i-1] == S2[j-1]:
-            lcs_algo[index-1] = S1[i-1]
-            i -= 1
-            j -= 1
-            index -= 1
-
-        elif L[i-1][j] > L[i][j-1]:
-            i -= 1
-        else:
-            j -= 1
-
-    # Printing the sub sequences
-    print("S1 : " + S1 + "\nS2 : " + S2)
-    print("LCS: " + "".join(lcs_algo))
-
-
-S1 = "Das ist ein Test"
-S2 = "und das ist ein weiterer Test mit mehr Zeichen"
-m = len(S1)
-n = len(S2)
-lcs_algo(S1, S2, m, n)
-```
-@Pyodide.eval
-
-**Schritt 2: Mischen**
-
-In der Praxis wird zwischen zwei Szenarien unterschieden:
-
-1. Mischen unabhängiger Dokumente (2-Wege-Mischen) - Ziel ist die Erzeugung eines neuen Dokumentes, dass die gemeinsamen Komponenten und individuelle Teilmengen vereint.
-
-2. Mischen von Dokumenten mit gemeinsamen Ursprung (3-Wege-Mischen) - Ziel ist die Integration möglichst aller Änderungen der neuen Dokumente in eine weiterentwickelte Version des Ursprungsdokumentes
-
-> Ein Paar von Änderung aus D1 bzw. D2 gegenüber einen Ausgangsdokument D0 kann unverträglich sein, wenn die Abbildung beider Änderungen in einem gemeinsamen Dokument nicht möglich ist. In diesem Fall spricht man von einem Konflikt.
-
-Bei einem Konflikt muss eine der beiden ̈Änderungen weggelassen werden. Die Entscheidung darüber kann anhand von zwei Vorgehensweisen realisiert werden:
-
-1. Nicht-interaktives Mischen: Es wird zunächst ein Mischergebnis erzeugt, das beide Änderungen umfasst. Über eine entsprechende Semantik werden die notwendigerweise duplizierten Stellen hervorgehoben. Ein Vorteil dieser Vorgehensweise ist, dass ein beliebiges weitergehendes Editieren zur Konfliktauflösung möglich ist.
-2. Interaktives Mischen: Ein Entwickler wird unmittelbar in den Mischprozess eingebunden und um "Schritt-für-Schritt" Entscheidungen gebeten. Denkbare Entscheidungen dabei sind:
-
-    + Übernahme der Änderung gemäß D1 oder D2,
-
-    + Übernahme keiner Änderung,
-
-    + Übernahme von modifizierten Änderung
-
-### Revisionen
-
-Bislang haben wir lediglich einzelne Dateien betrachtet. Logischerweise muss ein übergreifender Ansatz auch Ordnerstrukturen integrieren.
-
-![ProblemKollaborativesArbeiten](./img/11_VersionsverwaltungI/Versionsverlauf.png)
-
-Damit werden sowohl die Ordnerstruktur als auch die Dokumente als Struktur, wie auch deren Inhalte, erfasst.
-
-> Wichtig für die Nachvollziehbarkeit der Entwicklung ist somit die Kontinuität der Erfassung!
-
-Wenn sich der Ordner- oder Dateiname ändert wollen wir trotzdem noch die gesamte History der Entwicklung innerhalb eines Dokuments kennen. Folglich muss ein Link zwischen altem und neuem Namen gesetzt werden.
-
-### Formen der Versionsverwaltung
-
-**Lokale Versionsverwaltung**
-Bei der lokalen Versionsverwaltung wird oft nur eine einzige Datei versioniert, diese Variante wurde mit Werkzeugen wie SCCS und RCS umgesetzt. Sie findet auch heute noch Verwendung in Büroanwendungen, die Versionen eines Dokumentes in der Datei des Dokuments selbst speichern (Word).
-
-**Zentrale Versionsverwaltung**
-Diese Art ist als Client-Server-System aufgebaut, sodass der Zugriff auf ein Repository auch über Netzwerk erfolgen kann. Durch eine Rechteverwaltung wird dafür gesorgt, dass nur berechtigte Personen neue Versionen in das Archiv legen können. Die Versionsgeschichte ist hierbei nur im Repository vorhanden.
-
-Dieses Konzept wurde vom Open-Source-Projekt Concurrent Versions System (CVS) populär gemacht, mit Subversion (SVN) neu implementiert und von vielen kommerziellen Anbietern verwendet.
-
-<!--
-style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-right: auto;"
--->
-```ascii
-                                +-----------------+
-                                | V 21.09         |
-                              +-----------------+ |
-                              | V 21.10         | |
-              Zentrales     +-----------------+ | |
-              Repository    | V 21.11         | | |
-                            |                 | |-+
-                            |                 | |
-                            |                 |-+
-                            |                 |
-                            +-----------------+
-                                    |
-          +-------------------------+--------------------------+
-          |                         |                          |
-  +-----------------+       +-----------------+       +-----------------+
-  | V 21.11         |       | V 21.11         |       | V 21.11         |
-  | ABCD            |       | GEFH            |       | IKLM            |
-  |                 |       |                 |       |                 |
-  +-----------------+       +-----------------+       +-----------------+
-    User 1                    User 2                    User 3
-    Lokale Kopien
-```
-
-
-**Verteilte Versionsverwaltung**
-Die verteilte Versionsverwaltung (DVCS, distributed VCS) verwendet kein zentrales Repository mehr. Jeder, der an dem verwalteten Projekt arbeitet, hat sein eigenes Repository und kann dieses mit jedem beliebigen anderen Repository abgleichen. Die Versionsgeschichte ist dadurch genauso verteilt. Änderungen können lokal verfolgt werden, ohne eine Verbindung zu einem Server aufbauen zu müssen.
-
-<!--
-style="width: 100%; max-width: 560px; display: block; margin-left: auto; margin-right: auto;"
--->
-```ascii
-                                +-----------------+
-                                | V 21.09         |
-                              +-----------------+ |
-                              | V 21.10         | |
-              Zentrales     +-----------------+ | |
-              Repository    | V 21.11         | | |
-                            |                 | |-+
-                            |                 | |
-                            |                 |-+
-                            |                 |
-                            +-----------------+
-                                    |
-          +-------------------------+--------------------------+
-          |                         |                          |
-    +-----------------+      +-----------------+         +-----------------+
-    | V 21.09         |      | V 21.09         |         | V 21.09         |
-  +-----------------+ |    +-----------------+ |       +-----------------+ |
-  | V 21.10         | |    | V 21.10         | |       | V 21.10         | |
-+-----------------+ | |  +-----------------+ | |     +-----------------+ | |
-| V 21.11         | | |  | V 21.11         | | |     | V 21.11         | | |
-|                 | |-+  |                 | |-+   +-----------------+ | |-+
-|                 | |    |                 | |     | V 21.12         | | |
-|                 |-+    |                 |-+     |                 | |-+
-|                 |      |                 |       |                 | |
-+-----------------+      +-----------------+       |                 |-+
-         |                        |                +-----------------+
-         |                        |                          |
-         |                        |                          |
-+-----------------+       +-----------------+         +-----------------+
-| V 21.11         |       | V 21.09         |         | V 21.12         |
-| ABCD            |       | GEFH            |         | IKLM            |
-|                 |       |                 |         |                 |
-+-----------------+       +-----------------+         +-----------------+
-  User 1                    User 2                      User 3
-
-```
-
-| Zentrale Versionsverwaltung                                       | Verteilte Versionsverwaltung                                |
-| ----------------------------------------------------------------- | ----------------------------------------------------------- |
-| Historie liegt nur auf dem Server                                 | gesamte Historie ist den lokalen Repositiories bekannt              |
-| Zentrales Repository als Verbindungselement                       | n gleichberechtigte Repositories                            |
-| Konflikte bei Manipulation eines Dokumentes durch mehrere Autoren | Existenz paralleler  Versionen eines Dokumentes abgesichert |
-| Sequenz von Versionen                                             | gerichteter azyklischer Graph                               |
 
 ## Git
 
@@ -548,19 +252,6 @@ Die Entwicklungsgeschichte von git ist mit der des Linux Kernels verbunden:
 2005 wurde einen Anforderungsliste für eine Neuentwicklung definiert. Dabei wurde hervorgehoben, dass sie insbesondere sehr große Projekte (Zahl der Entwickler, Features und Codezeilen, Dateien) unterstützen können muss. Daraus entstand `Git` als freie Software zur verteilten Versionsverwaltung von Dateien.
 
 > Git dominiert entweder als einzelne Installation oder aber eingebettet in verschiedene Entwicklungsplattform die Softwareentwicklung!
-
-**Wie bekommen sie Git auf Ihren Windows-Rechner?**
-
-1. Variante 1: als Integralen Bestandteil in Ihrer Entwicklungsumgebung (Visual Studio Code)
-Die großen IDEs umfassen einen eigenen Git-Client, für einfachere Editoren muss dieser meist nachinstalliert werden.
-
-2. Variante 2: als unabhänigige Installation
-Unter [Link](https://phoenixnap.com/kb/how-to-install-git-windows) findet sich eine Schritt-für-Schritt Beschreibung für die Installation von Git unter Windows. Dabei wird sowohl ein Shell als auch eine GUI installiert.
-
-3. Variante 3: mittels cygwin
-Cygwin emuliert Linuxbefehle und Tools der Shell. Neben Compilern und einer Vielzahl von Entwicklertools können auch verschiedene Versionsverwaltungen installiert werden.
-
-Eine übergreifende Erklärung für die Installation gibt zum Beispiel dieses [Tutorial](https://www.youtube.com/watch?v=Fk12ELJ9Bww).
 
 ### Zustandsmodell einer Datei in Git
 
@@ -583,23 +274,6 @@ Unmodified --> Untracked : Löschen aus dem Repository
 
 ********************************************************************************
 
-                        {{1-2}}
-********************************************************************************
-
-```text @plantUML.png
-@startuml
-hide empty description
-[*] --> Untracked : Erzeugen einer Datei
-Untracked --> Staged : Hinzufügen zum Repository\n <color:Red> ""git add""
-Unmodified --> Modified : Editierung der Datei
-Modified --> Staged : Markiert als neue Version\n  <color:Red>  ""git add""
-Staged --> Unmodified : Bestätigt als neue Version\n   <color:Red>  ""git commit""
-Unmodified --> Untracked : Löschen aus dem Repository\n   <color:Red>  ""git remove""
-@enduml
-```
-
-********************************************************************************
-
 ### Grundlegende Anwendung (lokal!)
 
 > **Merke:** Anders als bei svn können Sie mit git eine völlig autonome Versionierung auf Ihrem Rechner realisieren. Ein Server ist dazu *zunächst* nicht nötig.
@@ -614,8 +288,8 @@ Aus dem Zustandmodell einer Datei ergeben sich drei Ebenen auf der wir eine Date
   Arbeitskopie     "Staging"        Lokales          Remote
                                    Repository      Repository
                        |               |                          
-                       |               |            Dazu kommen               
-                       |               |            wir morgen!          
+                       |               |                       
+                       |               |                      
        +-+- - - - - - -|- - - - - - - -|                          
        | | Änderungen  |               |                          
        | |             |               |                          
