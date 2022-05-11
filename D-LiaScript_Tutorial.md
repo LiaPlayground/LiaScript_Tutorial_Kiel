@@ -65,7 +65,7 @@ comment:  Try to write a short comment about
 * __Projekt-Website:__ https://LiaScript.github.io
 * __Open-Source:__ https://github.com/liascript
 * __YouTube:__ https://www.youtube.com/channel/UCyiTe2GkW_u05HSdvUblGYg
-* __Wieteres:__
+* __Weiteres:__
 
   - Dokumentation: https://github.com/LiaScript/docs
   - Bücher: https://github.com/topics/liascript-course
@@ -104,7 +104,7 @@ Quellen:
 
   - dezentrales Versionsmanagement System, entwickelt von [Linus Torvalds](https://de.wikipedia.org/wiki/Linus_Torvalds)
   - speichert die gesamte Historie eines Projektes
-  - ermöglicht kooperatives Arbeiten mehrer Autoren
+  - ermöglicht kooperatives Arbeiten mehrerer Autoren
   - Download: https://git-scm.com/downloads
 
      {{2}}
@@ -367,11 +367,11 @@ Blöcke<!-- style="background: green" --> und einzelne Elemente<!-- style="borde
 * Schriftgröße:
   `font-size: 4rem` oder `font-size: 3cm` oder `font-size: 20px`
 * Maximale Höhe & Breite:
-  `max-height: 300px` `max-widht: 300px`
+  `max-height: 300px` `max-width: 300px`
 * Minimale Höhe & Breite:
-  `min-height: 300px` `min-widht: 300px`
+  `min-height: 300px` `min-width: 300px`
 * Tatsächliche Höhe & Breite:
-  `width: 300px` oder `width: 50%` oder `ẁidth: 50vw`
+  `width: 300px` oder `width: 50%` oder `width: 50vw`
 * Ränder:
   `border: 2px solid black` oder `border: 2px dashed black`
 * Abstände:
